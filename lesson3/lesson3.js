@@ -1,32 +1,32 @@
 // Создайте бесконечный цикл и прервите его на 5ой итерации.
-for (let i = 0; i < 5; i++) {
-    if (i === 5) {
-        break;
-    }
+// for (let i = 0; ; i++) {
+//     if (i === 5) {
+//         break;
+//     }
 
-    alert(i);
-}
+//     alert(i);
+// }
 
 //Выведите все четные числа до 10 включительно. ⭐не используйте оператор **continue**.
-for (let i = 2; i <= 10; i += 2) {
-    alert(i);
-}
+// for (let i = 2; i <= 10; i += 2) {
+//     alert(i);
+// }
 
 // вычеслим с помощью цикла стоимость приготовления
 let dish1 = {
-    name: 'Buuzs',
+    dishName: 'Buuzs',
     price: 60,
     ingredients: ["testo", "groundMeat"],
     cost: 0,
 };
 let dish2 = {
-    name: 'Pizza',
+    dishName: 'Pizza',
     price: 400,
     ingredients: ["testo", "hum", "tomato", "onion", "cucumber"],
     cost: 0,
 };
 let dish3 = {
-    name: 'Salat',
+    dishName: 'Salat',
     price: 150,
     ingredients: ["tomato", "cucumber", "onion", "cabbage"],
     cost: 0,
@@ -42,6 +42,7 @@ let ingredientsPrice = {
     "cucumber": 5,
     "cabbage": 10
 }
+
 
 for (let dish1 of dishes) {
     for (let ingredient of dish1.ingredients) {
@@ -72,11 +73,16 @@ console.log(dish3);
 // Вычисляем профит
 for (let i = 0; i < dishes.length; i++) {
     for (let j = 0; j < dishes[i].ingredients.length; j++) {
-      let ingredient = dishes[i].ingredients[j];
-      if (massIngredients.includes(ingredient)) {
-        dishes[i].cost += ingredientsPrice[ingredient];
-      }
+        let ingredient = dishes[i].ingredients[j];
+        if (massIngredients.includes(ingredient)) {
+            dishes[i].cost += ingredientsPrice[ingredient];
+        }
     }
     dishes[i].profit = dishes[i].price - dishes[i].cost; // расчет профита
-  }
-  
+
+    const name = dishes.name;
+    const price = dishes.price;
+
+};
+let menuItem = `${dishName} - ${price}`;
+console.log(menuItem);
